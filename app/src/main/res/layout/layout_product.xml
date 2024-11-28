@@ -56,7 +56,7 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/tvPaket11"
+                                android:id="@+id/tvMeal11"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/paket_1_price"
@@ -88,7 +88,7 @@
                             app:tint="@color/primary" />
 
                         <TextView
-                            android:id="@+id/tvPaket1"
+                            android:id="@+id/tvMeal1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -201,7 +201,7 @@
                             app:tint="@color/primary" />
 
                         <TextView
-                            android:id="@+id/tvPaket2"
+                            android:id="@+id/tvMeal2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -296,7 +296,7 @@
                             app:tint="@color/primary" />
 
                         <TextView
-                            android:id="@+id/tvPaket3"
+                            android:id="@+id/tvMeal3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -384,7 +384,7 @@
                             app:tint="@color/primary" />
 
                         <TextView
-                            android:id="@+id/tvPaket4"
+                            android:id="@+id/tvMeal4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -479,7 +479,7 @@
                             app:tint="@color/primary" />
 
                         <TextView
-                            android:id="@+id/tvPaket5"
+                            android:id="@+id/tvMeal5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -567,7 +567,7 @@
                             app:tint="@color/primary" />
 
                         <TextView
-                            android:id="@+id/tvPaket6"
+                            android:id="@+id/tvMeal6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

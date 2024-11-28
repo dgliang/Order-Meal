@@ -8,9 +8,9 @@ public class ModelCategories implements Serializable {
     int icon; // 图标资源的整数 ID
     String name; // 分类名称
 
-    public ModelCategories(int iIcon, String strName) {
+    public ModelCategories(int iIcon, String name) {
         this.icon = iIcon;
-        this.name = strName;
+        this.name = name;
     }
 
     public int getIcon() {

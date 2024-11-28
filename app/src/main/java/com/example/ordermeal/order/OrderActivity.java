@@ -31,13 +31,13 @@ public class OrderActivity extends AppCompatActivity {
     String title;
 
     // 每个套餐的单价
-    double paket1 = 10.5, paket2 = 34.0, paket3 = 23.7, paket4 = 22.5, paket5 = 16.5, paket6 = 26.0;
+    double meal1 = 10.5, meal2 = 34.0, meal3 = 23.7, meal4 = 22.5, meal5 = 16.5, meal6 = 26.0;
 
     // 各套餐的数量，123总数量
     int itemCount1 = 0, itemCount2 = 0, itemCount3 = 0, itemCount4 = 0, itemCount5 = 0, itemCount6 = 0, totalItems;
 
     // 每个套餐的总价和总价
-    double countP1, countP2, countP3, countP4, countP5, countP6, totalPrice;
+    double count1, count2, count3, count4, count5, count6, totalPrice;
 
     // 增加和减少按钮
     ImageView imageAdd1, imageAdd2, imageAdd3, imageAdd4, imageAdd5, imageAdd6,
@@ -45,7 +45,7 @@ public class OrderActivity extends AppCompatActivity {
     Toolbar toolbar;
 
     // 各套餐的TextView
-    TextView tvPaket1, tvPaket2, tvPaket3, tvPaket4, tvPaket5, tvPaket6, tvPaket11, tvAmount, tvTotalPrice;
+    TextView tvMeal1, tvMeal2, tvMeal3, tvMeal4, tvMeal5, tvMeal6, tvMeal11, tvAmount, tvTotalPrice;
 
     // 结账按钮
     MaterialButton btnCheckout;
@@ -69,14 +69,14 @@ public class OrderActivity extends AppCompatActivity {
 
     // 初始化UI布局，绑定视图组件
     private void initLayout() {
-        tvPaket11 = findViewById(R.id.tvPaket11);
+        tvMeal11 = findViewById(R.id.tvMeal11);
         toolbar = findViewById(R.id.toolbar);
-        tvPaket1 = findViewById(R.id.tvPaket1);
-        tvPaket2 = findViewById(R.id.tvPaket2);
-        tvPaket3 = findViewById(R.id.tvPaket3);
-        tvPaket4 = findViewById(R.id.tvPaket4);
-        tvPaket5 = findViewById(R.id.tvPaket5);
-        tvPaket6 = findViewById(R.id.tvPaket6);
+        tvMeal1 = findViewById(R.id.tvMeal1);
+        tvMeal2 = findViewById(R.id.tvMeal2);
+        tvMeal3 = findViewById(R.id.tvMeal3);
+        tvMeal4 = findViewById(R.id.tvMeal4);
+        tvMeal5 = findViewById(R.id.tvMeal5);
+        tvMeal6 = findViewById(R.id.tvMeal6);
         tvAmount = findViewById(R.id.tvOrderAmount);
         tvTotalPrice = findViewById(R.id.tvTotalPrice);
         imageAdd1 = findViewById(R.id.imageAdd1);
@@ -104,7 +104,7 @@ public class OrderActivity extends AppCompatActivity {
         }
 
         // 为套餐 1 的 TextView 添加删除线效果
-        tvPaket11.setPaintFlags(tvPaket11.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        tvMeal11.setPaintFlags(tvMeal11.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 
         orderViewModel = ViewModelProviders.of(this).get(OrderViewModel.class);
     }
@@ -113,17 +113,17 @@ public class OrderActivity extends AppCompatActivity {
     private void initPaket1() {
         imageAdd1.setOnClickListener(view -> {
             itemCount1 = itemCount1 + 1;
-            tvPaket1.setText(String.valueOf(itemCount1));
-            countP1 = paket1 * itemCount1;
+            tvMeal1.setText(String.valueOf(itemCount1));
+            count1 = meal1 * itemCount1;
             initTotalPrice();
         });
 
         imageMinus1.setOnClickListener(view -> {
             if (itemCount1 > 0) {
                 itemCount1 = itemCount1 - 1;
-                tvPaket1.setText(String.valueOf(itemCount1));
+                tvMeal1.setText(String.valueOf(itemCount1));
             }
-            countP1 = paket1 * itemCount1;
+            count1 = meal1 * itemCount1;
             initTotalPrice();
         });
     }
@@ -132,17 +132,17 @@ public class OrderActivity extends AppCompatActivity {
     private void initPaket2() {
         imageAdd2.setOnClickListener(view -> {
             itemCount2 = itemCount2 + 1;
-            tvPaket2.setText(String.valueOf(itemCount2));
-            countP2 = paket2 * itemCount2;
+            tvMeal2.setText(String.valueOf(itemCount2));
+            count2 = meal2 * itemCount2;
             initTotalPrice();
         });
 
         imageMinus2.setOnClickListener(view -> {
             if (itemCount2 > 0) {
                 itemCount2 = itemCount2 - 1;
-                tvPaket2.setText(String.valueOf(itemCount2));
+                tvMeal2.setText(String.valueOf(itemCount2));
             }
-            countP2 = paket2 * itemCount2;
+            count2 = meal2 * itemCount2;
             initTotalPrice();
         });
     }
@@ -151,17 +151,17 @@ public class OrderActivity extends AppCompatActivity {
     private void initPaket3() {
         imageAdd3.setOnClickListener(view -> {
             itemCount3 = itemCount3 + 1;
-            tvPaket3.setText(String.valueOf(itemCount3));
-            countP3 = paket3 * itemCount3;
+            tvMeal3.setText(String.valueOf(itemCount3));
+            count3 = meal3 * itemCount3;
             initTotalPrice();
         });
 
         imageMinus3.setOnClickListener(view -> {
             if (itemCount3 > 0) {
                 itemCount3 = itemCount3 - 1;
-                tvPaket3.setText(String.valueOf(itemCount3));
+                tvMeal3.setText(String.valueOf(itemCount3));
             }
-            countP3 = paket3 * itemCount3;
+            count3 = meal3 * itemCount3;
             initTotalPrice();
         });
     }
@@ -170,17 +170,17 @@ public class OrderActivity extends AppCompatActivity {
     private void initPaket4() {
         imageAdd4.setOnClickListener(view -> {
             itemCount4 = itemCount4 + 1;
-            tvPaket4.setText(String.valueOf(itemCount4));
-            countP4 = paket4 * itemCount4;
+            tvMeal4.setText(String.valueOf(itemCount4));
+            count4 = meal4 * itemCount4;
             initTotalPrice();
         });
 
         imageMinus4.setOnClickListener(view -> {
             if (itemCount4 > 0) {
                 itemCount4 = itemCount4 - 1;
-                tvPaket4.setText(String.valueOf(itemCount4));
+                tvMeal4.setText(String.valueOf(itemCount4));
             }
-            countP4 = paket4 * itemCount4;
+            count4 = meal4 * itemCount4;
             initTotalPrice();
         });
     }
@@ -189,17 +189,17 @@ public class OrderActivity extends AppCompatActivity {
     private void initPaket5() {
         imageAdd5.setOnClickListener(view -> {
             itemCount5 = itemCount1 + 1;
-            tvPaket5.setText(String.valueOf(itemCount5));
-            countP5 = paket5 * itemCount5;
+            tvMeal5.setText(String.valueOf(itemCount5));
+            count5 = meal5 * itemCount5;
             initTotalPrice();
         });
 
         imageMinus5.setOnClickListener(view -> {
             if (itemCount5 > 0) {
                 itemCount5 = itemCount5 - 1;
-                tvPaket5.setText(String.valueOf(itemCount5));
+                tvMeal5.setText(String.valueOf(itemCount5));
             }
-            countP5 = paket5 * itemCount5;
+            count5 = meal5 * itemCount5;
             initTotalPrice();
         });
     }
@@ -208,17 +208,17 @@ public class OrderActivity extends AppCompatActivity {
     private void initPaket6() {
         imageAdd6.setOnClickListener(view -> {
             itemCount6 = itemCount6 + 1;
-            tvPaket6.setText(String.valueOf(itemCount6));
-            countP6 = paket6 * itemCount6;
+            tvMeal6.setText(String.valueOf(itemCount6));
+            count6 = meal6 * itemCount6;
             initTotalPrice();
         });
 
         imageMinus6.setOnClickListener(view -> {
             if (itemCount6 > 0) {
                 itemCount6 = itemCount6 - 1;
-                tvPaket6.setText(String.valueOf(itemCount6));
+                tvMeal6.setText(String.valueOf(itemCount6));
             }
-            countP6 = paket6 * itemCount6;
+            count6 = meal6 * itemCount6;
             initTotalPrice();
         });
     }
@@ -227,7 +227,7 @@ public class OrderActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void initTotalPrice() {
         totalItems = itemCount1 + itemCount2 + itemCount3 + itemCount4 + itemCount5 + itemCount6;
-        totalPrice = countP1 + countP2 + countP3 + countP4 + countP5 + countP6;
+        totalPrice = count1 + count2 + count3 + count4 + count5 + count6;
 
         // 显示总数量到 tvAmount
         tvAmount.setText(totalItems + " 份");

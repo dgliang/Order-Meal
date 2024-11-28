@@ -75,17 +75,17 @@ public class MainActivity extends AppCompatActivity {
     // 初始化分类数据
     private void initCategories() {
         // 创建分类数据模型并添加到列表
-        modelCategory = new ModelCategories(R.drawable.ic_complete, "Complete Package");
+        modelCategory = new ModelCategories(R.drawable.ic_complete, "全套套餐");
         modelCategoryList.add(modelCategory);
-        modelCategory = new ModelCategories(R.drawable.ic_saving, "Saving Package");
+        modelCategory = new ModelCategories(R.drawable.ic_saving, "省钱套餐");
         modelCategoryList.add(modelCategory);
-        modelCategory = new ModelCategories(R.drawable.ic_healthy, "Healthy Package");
+        modelCategory = new ModelCategories(R.drawable.ic_healthy, "营养套餐");
         modelCategoryList.add(modelCategory);
-        modelCategory = new ModelCategories(R.drawable.ic_fast, "FastFood");
+        modelCategory = new ModelCategories(R.drawable.ic_fast, "快餐");
         modelCategoryList.add(modelCategory);
-        modelCategory = new ModelCategories(R.drawable.ic_event, "Event Packages");
+        modelCategory = new ModelCategories(R.drawable.ic_event, "活动套餐");
         modelCategoryList.add(modelCategory);
-        modelCategory = new ModelCategories(R.drawable.ic_more_food, "Others");
+        modelCategory = new ModelCategories(R.drawable.ic_more_food, "其他");
         modelCategoryList.add(modelCategory);
 
         // 为 RecyclerView 设置适配器
@@ -96,13 +96,13 @@ public class MainActivity extends AppCompatActivity {
     // 初始化流行菜单数据
     private void initTrending() {
         // 创建流行菜单数据模型并添加到列表
-        modelTrend = new ModelTrending(R.drawable.complete_1,"Menu 1", "2,200 收藏");
+        modelTrend = new ModelTrending(R.drawable.complete1,"蒜蓉小龙虾", "2,200 收藏");
         modelTrendList.add(modelTrend);
-        modelTrend = new ModelTrending(R.drawable.complete_2,"Menu 2", "1,220 收藏");
+        modelTrend = new ModelTrending(R.drawable.complete2,"意式沙拉", "1,220 收藏");
         modelTrendList.add(modelTrend);
-        modelTrend = new ModelTrending(R.drawable.complete_3,"Menu 3", "345 收藏");
+        modelTrend = new ModelTrending(R.drawable.complete3,"意式橄榄蘑菇披萨", "645 收藏");
         modelTrendList.add(modelTrend);
-        modelTrend = new ModelTrending(R.drawable.complete_4,"Menu 4", "590 收藏");
+        modelTrend = new ModelTrending(R.drawable.complete4,"炸鱿鱼圈", "590 收藏");
         modelTrendList.add(modelTrend);
 
         // 为 RecyclerView 设置适配器
