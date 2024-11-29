@@ -241,10 +241,10 @@ public class OrderActivity extends AppCompatActivity {
             if (totalItems == 0 || totalPrice == 0) {
                 Toast.makeText(OrderActivity.this, "请先选择食物菜单！", Toast.LENGTH_SHORT).show();
             }
-            // 检查用户选择的套餐数量是否符合最小订单要求（至少10个）
-            else if (totalItems < 10) {
-                Toast.makeText(OrderActivity.this, "最少需要 10 份订单！", Toast.LENGTH_SHORT).show();
-            }
+//            // 检查用户选择的套餐数量是否符合最小订单要求（至少10个）
+//            else if (totalItems < 10) {
+//                Toast.makeText(OrderActivity.this, "最少需要 10 份订单！", Toast.LENGTH_SHORT).show();
+//            }
             // 如果选择的套餐符合条件，添加订单并显示成功提示
             else {
                 orderViewModel.addDataOrder(title, totalItems, totalPrice);
