@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 
 import com.example.ordermeal.database.DatabaseClient;
 import com.example.ordermeal.database.DatabaseModel;
-import com.example.ordermeal.database.dao.DatabaseDao;
+import com.example.ordermeal.database.dao.DBDao;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Completable;
@@ -17,12 +17,12 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 // OrderViewModel 类负责处理订单数据的业务逻辑，并通过 RxJava 与数据库进行交互。
 public class OrderViewModel extends AndroidViewModel {
 
-    DatabaseDao dbDao;
+    DBDao dbDao;
 
     public OrderViewModel(@NonNull Application application) {
         super(application);
 
-        dbDao = DatabaseClient.getInstance(application).getAppDatabase().databaseDao();
+        dbDao = DatabaseClient.getInstance(application).getAppDatabase().dbDao();
     }
 
     public void addDataOrder(final String strMenu, final int amount, final double price) {

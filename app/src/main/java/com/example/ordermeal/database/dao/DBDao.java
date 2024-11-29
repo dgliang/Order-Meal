@@ -11,7 +11,7 @@ import com.example.ordermeal.database.DatabaseModel;
 import java.util.List;
 
 @Dao
-public interface DatabaseDao {
+public interface DBDao {
 
     @Query("SELECT * FROM order_meal_db where uid != 1")
     LiveData<List<DatabaseModel>> getAllOrder();

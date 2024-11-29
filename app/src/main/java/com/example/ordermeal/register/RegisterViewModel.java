@@ -7,19 +7,19 @@ import androidx.lifecycle.AndroidViewModel;
 
 import com.example.ordermeal.database.DatabaseClient;
 import com.example.ordermeal.database.DatabaseModel;
-import com.example.ordermeal.database.dao.DatabaseDao;
+import com.example.ordermeal.database.dao.DBDao;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Completable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class RegisterViewModel extends AndroidViewModel {
-    DatabaseDao dbDao; // 定义数据库数据访问对象，用于与数据库交互
+    DBDao dbDao; // 定义数据库数据访问对象，用于与数据库交互
 
     public RegisterViewModel(@NonNull Application application) {
         super(application);
 
-        dbDao = DatabaseClient.getInstance(application).getAppDatabase().databaseDao();
+        dbDao = DatabaseClient.getInstance(application).getAppDatabase().dbDao();
     }
 
     // 将用户注册数据保存到数据库

@@ -58,12 +58,12 @@ public class OrderActivity extends AppCompatActivity {
 
         initStateBar();
         initLayout();
-        initPaket1();
-        initPaket2();
-        initPaket3();
-        initPaket4();
-        initPaket5();
-        initPaket6();
+        initMeal1();
+        initMeal2();
+        initMeal3();
+        initMeal4();
+        initMeal5();
+        initMeal6();
         initInputData();
     }
 
@@ -110,7 +110,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     // 初始化套餐 1 的数量增加/减少功能
-    private void initPaket1() {
+    private void initMeal1() {
         imageAdd1.setOnClickListener(view -> {
             itemCount1 = itemCount1 + 1;
             tvMeal1.setText(String.valueOf(itemCount1));
@@ -129,7 +129,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     // 初始化套餐 2 的数量增加/减少功能
-    private void initPaket2() {
+    private void initMeal2() {
         imageAdd2.setOnClickListener(view -> {
             itemCount2 = itemCount2 + 1;
             tvMeal2.setText(String.valueOf(itemCount2));
@@ -148,7 +148,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     // 初始化套餐 3 的数量增加/减少功能
-    private void initPaket3() {
+    private void initMeal3() {
         imageAdd3.setOnClickListener(view -> {
             itemCount3 = itemCount3 + 1;
             tvMeal3.setText(String.valueOf(itemCount3));
@@ -167,7 +167,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     // 初始化套餐 4 的数量增加/减少功能
-    private void initPaket4() {
+    private void initMeal4() {
         imageAdd4.setOnClickListener(view -> {
             itemCount4 = itemCount4 + 1;
             tvMeal4.setText(String.valueOf(itemCount4));
@@ -186,7 +186,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     // 初始化套餐 5 的数量增加/减少功能
-    private void initPaket5() {
+    private void initMeal5() {
         imageAdd5.setOnClickListener(view -> {
             itemCount5 = itemCount1 + 1;
             tvMeal5.setText(String.valueOf(itemCount5));
@@ -205,7 +205,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     // 初始化套餐 6 的数量增加/减少功能
-    private void initPaket6() {
+    private void initMeal6() {
         imageAdd6.setOnClickListener(view -> {
             itemCount6 = itemCount6 + 1;
             tvMeal6.setText(String.valueOf(itemCount6));

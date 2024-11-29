@@ -8,7 +8,7 @@ import androidx.lifecycle.LiveData;
 
 import com.example.ordermeal.database.DatabaseClient;
 import com.example.ordermeal.database.DatabaseModel;
-import com.example.ordermeal.database.dao.DatabaseDao;
+import com.example.ordermeal.database.dao.DBDao;
 
 import java.util.List;
 
@@ -18,12 +18,12 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 
 public class HistoryViewModel extends AndroidViewModel {
     LiveData<List<DatabaseModel>> modelDatabase; // LiveData对象，用于观察历史记录数据的变化
-    DatabaseDao dbDao;
+    DBDao dbDao;
 
     public HistoryViewModel(@NonNull Application application) {
         super(application);
 
-        dbDao = DatabaseClient.getInstance(application).getAppDatabase().databaseDao();
+        dbDao = DatabaseClient.getInstance(application).getAppDatabase().dbDao();
 
         modelDatabase = dbDao.getAllOrder();
     }
