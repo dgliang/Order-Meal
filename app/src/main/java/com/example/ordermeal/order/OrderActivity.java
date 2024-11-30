@@ -115,7 +115,7 @@ public class OrderActivity extends AppCompatActivity {
             itemCount1 = itemCount1 + 1;
             tvMeal1.setText(String.valueOf(itemCount1));
             count1 = meal1 * itemCount1;
-            initTotalPrice();
+            calculateTotalPrice();
         });
 
         imageMinus1.setOnClickListener(view -> {
@@ -124,7 +124,7 @@ public class OrderActivity extends AppCompatActivity {
                 tvMeal1.setText(String.valueOf(itemCount1));
             }
             count1 = meal1 * itemCount1;
-            initTotalPrice();
+            calculateTotalPrice();
         });
     }
 
@@ -134,7 +134,7 @@ public class OrderActivity extends AppCompatActivity {
             itemCount2 = itemCount2 + 1;
             tvMeal2.setText(String.valueOf(itemCount2));
             count2 = meal2 * itemCount2;
-            initTotalPrice();
+            calculateTotalPrice();
         });
 
         imageMinus2.setOnClickListener(view -> {
@@ -143,7 +143,7 @@ public class OrderActivity extends AppCompatActivity {
                 tvMeal2.setText(String.valueOf(itemCount2));
             }
             count2 = meal2 * itemCount2;
-            initTotalPrice();
+            calculateTotalPrice();
         });
     }
 
@@ -153,7 +153,7 @@ public class OrderActivity extends AppCompatActivity {
             itemCount3 = itemCount3 + 1;
             tvMeal3.setText(String.valueOf(itemCount3));
             count3 = meal3 * itemCount3;
-            initTotalPrice();
+            calculateTotalPrice();
         });
 
         imageMinus3.setOnClickListener(view -> {
@@ -162,7 +162,7 @@ public class OrderActivity extends AppCompatActivity {
                 tvMeal3.setText(String.valueOf(itemCount3));
             }
             count3 = meal3 * itemCount3;
-            initTotalPrice();
+            calculateTotalPrice();
         });
     }
 
@@ -172,7 +172,7 @@ public class OrderActivity extends AppCompatActivity {
             itemCount4 = itemCount4 + 1;
             tvMeal4.setText(String.valueOf(itemCount4));
             count4 = meal4 * itemCount4;
-            initTotalPrice();
+            calculateTotalPrice();
         });
 
         imageMinus4.setOnClickListener(view -> {
@@ -181,7 +181,7 @@ public class OrderActivity extends AppCompatActivity {
                 tvMeal4.setText(String.valueOf(itemCount4));
             }
             count4 = meal4 * itemCount4;
-            initTotalPrice();
+            calculateTotalPrice();
         });
     }
 
@@ -191,7 +191,7 @@ public class OrderActivity extends AppCompatActivity {
             itemCount5 = itemCount1 + 1;
             tvMeal5.setText(String.valueOf(itemCount5));
             count5 = meal5 * itemCount5;
-            initTotalPrice();
+            calculateTotalPrice();
         });
 
         imageMinus5.setOnClickListener(view -> {
@@ -200,7 +200,7 @@ public class OrderActivity extends AppCompatActivity {
                 tvMeal5.setText(String.valueOf(itemCount5));
             }
             count5 = meal5 * itemCount5;
-            initTotalPrice();
+            calculateTotalPrice();
         });
     }
 
@@ -210,7 +210,7 @@ public class OrderActivity extends AppCompatActivity {
             itemCount6 = itemCount6 + 1;
             tvMeal6.setText(String.valueOf(itemCount6));
             count6 = meal6 * itemCount6;
-            initTotalPrice();
+            calculateTotalPrice();
         });
 
         imageMinus6.setOnClickListener(view -> {
@@ -219,13 +219,13 @@ public class OrderActivity extends AppCompatActivity {
                 tvMeal6.setText(String.valueOf(itemCount6));
             }
             count6 = meal6 * itemCount6;
-            initTotalPrice();
+            calculateTotalPrice();
         });
     }
 
     // 更新总价格和总数量
     @SuppressLint("SetTextI18n")
-    private void initTotalPrice() {
+    private void calculateTotalPrice() {
         totalItems = itemCount1 + itemCount2 + itemCount3 + itemCount4 + itemCount5 + itemCount6;
         totalPrice = count1 + count2 + count3 + count4 + count5 + count6;
 
@@ -241,11 +241,6 @@ public class OrderActivity extends AppCompatActivity {
             if (totalItems == 0 || totalPrice == 0) {
                 Toast.makeText(OrderActivity.this, "请先选择食物菜单！", Toast.LENGTH_SHORT).show();
             }
-//            // 检查用户选择的套餐数量是否符合最小订单要求（至少10个）
-//            else if (totalItems < 10) {
-//                Toast.makeText(OrderActivity.this, "最少需要 10 份订单！", Toast.LENGTH_SHORT).show();
-//            }
-            // 如果选择的套餐符合条件，添加订单并显示成功提示
             else {
                 orderViewModel.addDataOrder(title, totalItems, totalPrice);
                 Toast.makeText(OrderActivity.this, "您的订单正在处理中，请前往历史菜单中查看！", Toast.LENGTH_SHORT).show();

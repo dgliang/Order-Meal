@@ -17,7 +17,7 @@
     <string name="search_food_package_text">搜索食品、包裹等……</string>
     <string name="main_location_text">珠海市，广东</string>
     <string name="main_order_history_text">历史订单</string>
-    <string name="main_categories_text">菜品种类</string>
+    <string name="main_categories_text">套餐种类</string>
     <string name="main_new_trending_text"><![CDATA[新品 & 热门]]></string>
     <string name="img_place_text">请确保收件人地址正确！</string>
     <string name="single_price_text">订单显示的是单价</string>

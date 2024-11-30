@@ -49,7 +49,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
 
         holder.tvName.setText(data.getMenu_name());  // 设置菜单名称
         holder.tvDate.setText(FunctionHelper.getTodayTime());  // 设置当前日期
-        holder.tvAmount.setText(data.getAmount() + " item");  // 设置商品数量
+        holder.tvAmount.setText(data.getAmount() + " 份");  // 设置商品数量
         holder.tvPrice.setText(FunctionHelper.priceFormat(data.getPrice()));  // 格式化并显示价格
     }
 

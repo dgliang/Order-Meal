@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         modelCategoryList.add(modelCategory);
         modelCategory = new ModelCategories(R.drawable.ic_event, "活动套餐");
         modelCategoryList.add(modelCategory);
-        modelCategory = new ModelCategories(R.drawable.ic_more_food, "其他");
+        modelCategory = new ModelCategories(R.drawable.ic_more_food, "其他套餐");
         modelCategoryList.add(modelCategory);
 
         // 为 RecyclerView 设置适配器

@@ -14,10 +14,10 @@ public class FunctionHelper {
         return "RMB " + formatter.format(price);
     }
 
-    // 获取今天的日期，格式化为 "d MMMM yyyy" 例如：1 January 2024）
+    // 获取今天的日期，格式化为 "yyyy-MM-d HH:mm" 例如：2024-11-29 12:34）
     public static String getTodayTime() {
         Date date = Calendar.getInstance().getTime();
-        return (String) DateFormat.format("d MMMM yyyy", date);
+        return (String) DateFormat.format("yyyy-MM-d HH:mm", date);
     }
 
 }
